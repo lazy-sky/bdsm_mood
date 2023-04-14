@@ -24,20 +24,18 @@ const Home = () => {
       <h1 className={styles.title}>나만의 섹슈얼 무드</h1>
       <h2 className={styles.subTitle}>타고난 나의 매력적인 분위기는?</h2>
 
-      <div className={styles.warning}>성적 지향 테스트로 문항 내 성적 상황 묘사가 있습니다.</div>
-      <div className={styles.btns}>
-        <button type='button' onClick={() => handleButtonClick('male')} className={styles.male}>
-          <div>그가 보는 나는?</div>
-          <div className={styles.arrow}>
+      <div className={styles.bottom}>
+        <div className={styles.warning}>성적 지향 테스트로 문항 내 성적 상황 묘사가 있습니다.</div>
+        <div className={styles.btns}>
+          <button type='button' onClick={() => handleButtonClick('male')} className={styles.male}>
+            <div>그가 보는 나는?</div>
             <img src={ArrowIcon} alt='' />
-          </div>
-        </button>
-        <button type='button' onClick={() => handleButtonClick('female')} className={styles.female}>
-          <div>그녀가 보는 나는?</div>
-          <div className={styles.arrow}>
+          </button>
+          <button type='button' onClick={() => handleButtonClick('female')} className={styles.female}>
+            <div>그녀가 보는 나는?</div>
             <img src={ArrowIcon} alt='' />
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
     </div>
   )

@@ -10,12 +10,18 @@ const Test = () => {
   const navigate = useNavigate()
   const gender = useRecoilValue(genderState)
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
+  const [progress, setProgress] = useState((1 * 100) / questions.length)
 
   useEffect(() => {
     if (currentQuestionIndex === questions.length) {
       navigate('/result')
     }
   }, [currentQuestionIndex, navigate])
+
+  useEffect(() => {
+    if (currentQuestionIndex === 0) return
+    setProgress((prev) => prev + 20)
+  }, [currentQuestionIndex])
 
   const handleButtonClick = () => {
     setCurrentQuestionIndex((prev) => prev + 1)
@@ -31,18 +37,37 @@ const Test = () => {
       {gender}
       {currentQuestionIndex >= 0 && currentQuestionIndex <= questions.length && (
         <div className={styles.questionBox}>
-          <div>{questions[currentQuestionIndex].question}</div>
-          <button type='button' onClick={handleButtonClick}>
-            {questions[currentQuestionIndex].answer1.text}
-          </button>
-          <button type='button' onClick={handleButtonClick}>
-            {questions[currentQuestionIndex].answer2.text}
-          </button>
+          <div className={styles.question}>{questions[currentQuestionIndex].question}</div>
+          <div className={styles.answers}>
+            <button type='button' onClick={handleButtonClick}>
+              <div className={styles.card}>
+                <img src='' alt='' />
+              </div>
+              <div>{questions[currentQuestionIndex].answer1.text}</div>
+            </button>
+            <button type='button' onClick={handleButtonClick}>
+              <div className={styles.card}>
+                <img src='' alt='' />
+              </div>
+              <div>{questions[currentQuestionIndex].answer2.text}</div>
+            </button>
+          </div>
         </div>
       )}
-      <div>
-        {currentQuestionIndex + 1} / {questions.length}
-        <progress max={questions.length} value={currentQuestionIndex + 1} className={styles.progress} />
+      <div className={styles.progress}>
+        <div className={styles.number}>
+          {currentQuestionIndex + 1} / {questions.length}
+        </div>
+        <div className={styles.progressBar}>
+          <div
+            style={{
+              backgroundColor: 'white',
+              width: `${progress}%`,
+              height: '10px',
+              borderRadius: '8px',
+            }}
+          />
+        </div>
       </div>
     </div>
   )
