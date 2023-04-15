@@ -27,11 +27,11 @@ const Home = () => {
       <div className={styles.bottom}>
         <div className={styles.warning}>성적 지향 테스트로 문항 내 성적 상황 묘사가 있습니다.</div>
         <div className={styles.btns}>
-          <button type='button' onClick={() => handleButtonClick('male')} className={styles.male}>
+          <button type='button' onClick={() => handleButtonClick('그')} className={styles.male}>
             <div>그가 보는 나는?</div>
             <img src={ArrowIcon} alt='' />
           </button>
-          <button type='button' onClick={() => handleButtonClick('female')} className={styles.female}>
+          <button type='button' onClick={() => handleButtonClick('그녀')} className={styles.female}>
             <div>그녀가 보는 나는?</div>
             <img src={ArrowIcon} alt='' />
           </button>

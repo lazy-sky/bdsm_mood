@@ -14,7 +14,7 @@ const Test = () => {
 
   useEffect(() => {
     if (currentQuestionIndex === questions.length) {
-      navigate('/result')
+      navigate('/result/1')
     }
   }, [currentQuestionIndex, navigate])
 
@@ -34,7 +34,6 @@ const Test = () => {
 
   return (
     <div className={styles.root}>
-      {gender}
       {currentQuestionIndex >= 0 && currentQuestionIndex <= questions.length && (
         <div className={styles.questionBox}>
           <div className={styles.question}>{questions[currentQuestionIndex].question}</div>
