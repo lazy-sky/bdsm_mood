@@ -17,7 +17,7 @@
     "function-name-case": [
       "lower",
       {
-        "ignoreFunctions": "/^[a-z_](|[a-zA-Z0-9]+)$/"
+        "ignoreFunctions": ["/^[a-z_](|[a-zA-Z0-9]+)$/"]
       }
     ],
     "keyframes-name-pattern": "^[a-z][a-zA-Z0-9_]+$",
@@ -41,7 +41,7 @@
     "scss/at-mixin-pattern": "^[a-z_](|[a-zA-Z0-9]+)$",
     "scss/dollar-variable-empty-line-before": null,
     "scss/dollar-variable-pattern": [
-      "^[A-Z0-9_]+$",
+      "^[a-zA-Z0-9_]+$",
       {
         "ignore": "local"
       }

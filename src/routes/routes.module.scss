@@ -7,10 +7,10 @@
   background-color: beige;
 
   .container {
+    position: relative;
     width: 100%;
     min-width: breakpoints.$BP_XS;
     max-width: breakpoints.$BP_S;
     height: 100vh;
-    background-color: colors.$WHITE;
   }
 }

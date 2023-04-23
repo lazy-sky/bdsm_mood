@@ -1,7 +1,15 @@
 .root {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: url('/assets/bg_question.png');
+  background-repeat: no-repeat;
+  background-position: center;
+
   .questionBox {
-    width: 80%;
-    margin: 142px auto 0;
+    position: absolute;
+    top: 120px;
+    width: 100%;
     text-align: center;
 
     .question {
@@ -13,6 +21,7 @@
     .answers {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      padding: 56px;
 
       > button {
         display: flex;
@@ -31,12 +40,14 @@
   }
 
   .progress {
-    width: 264px;
-    margin: 0 auto;
-    margin-top: 84px;
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
 
     .number {
+      width: 264px;
       padding-right: 4px;
+      margin: 0 auto;
       margin-bottom: 4px;
       font-size: 18px;
       line-height: 22px;
@@ -47,16 +58,12 @@
     .progressBar {
       display: flex;
       align-items: center;
-      width: 100%;
+      width: 264px;
       height: 16px;
       padding: 0 4px;
+      margin: 0 auto;
       background-color: #e3dde2;
       border-radius: 8px;
-
-      &::-webkit-progress-value {
-        background: white;
-        border-radius: 8px;
-      }
     }
   }
 }
