@@ -3,6 +3,7 @@
 
 .root {
   display: flex;
+  align-items: center;
   justify-content: center;
   background-color: beige;
 
@@ -12,5 +13,6 @@
     min-width: breakpoints.$BP_XS;
     max-width: breakpoints.$BP_S;
     height: 100vh;
+    max-height: 844px;
   }
 }
