@@ -2,9 +2,7 @@
 @use 'styles/constants/colors';
 
 .root {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100vh;
   background-color: beige;
 
   .container {
@@ -12,7 +10,23 @@
     width: 100%;
     min-width: breakpoints.$BP_XS;
     max-width: breakpoints.$BP_S;
-    height: 100vh;
+    height: 100%;
     max-height: 844px;
+    margin: 0 auto;
+  }
+
+  // 세부 규칙 필요
+  @media all and (min-height: 844px) {
+    padding-top: 30%;
+
+    footer.forLargeViewport {
+      height: 100%;
+      max-height: calc(100vh - 844px - 30%);
+      background-color: beige;
+
+      .copyright {
+        padding: 20px;
+      }
+    }
   }
 }

@@ -17,6 +17,9 @@ const App = () => {
           <Route path='/result/:type' element={<Result />} />
         </Routes>
       </div>
+      <footer className={styles.forLargeViewport}>
+        <p className={styles.copyright}>Copyright 2023 lazy-sky</p>
+      </footer>
     </div>
   )
 }
