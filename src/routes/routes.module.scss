@@ -17,11 +17,11 @@
 
   // 세부 규칙 필요
   @media all and (min-height: 844px) {
-    padding-top: 30%;
+    padding-top: 100px;
 
     footer.forLargeViewport {
       height: 100%;
-      max-height: calc(100vh - 844px - 30%);
+      max-height: calc(100vh - 844px - 100px);
       background-color: beige;
 
       .copyright {
